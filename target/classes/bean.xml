@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--
+        注意：基于注解整合时，
+        导入约束时需要多导入一个context名称空间下的约束。
+        由于我们使用了注解配置，此时不能在继承JdbcDaoSupport，
+        需要自己配置一个JdbcTemplate
+    -->
+    <!--告知spring创建容器时要扫描的包-->
+    <context:component-scan base-package="ziming.socks5"/>
+</beans>
